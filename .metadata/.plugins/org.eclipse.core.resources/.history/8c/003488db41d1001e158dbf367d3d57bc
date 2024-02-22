@@ -1,0 +1,20 @@
+package org.kh.app2;
+
+public class Loop4 {
+	public static void main(String[] args) {
+		/*
+		 	for와 마찬가지로 조건이 만족하는 동안만 반복수행
+		 	그러나, while은 괄호에 조건만 기입한다.
+		 	while(조건식){
+		 		반복한문장;
+		 	}
+		*/
+		int i = 0, tot = 0;
+		while(i <= 10) {
+			//i++;
+			tot += i;
+			i++;
+		}
+		System.out.println("result : "+tot);
+	}
+}

@@ -1,0 +1,120 @@
+package org.kh.app2;
+//반복문 : for, while, do~while~
+public class Loop1 {
+	public static void main(String[] args) {
+		int n = 0;	//전역변수 : 한 번만 선언할 수 있다.
+		/*
+			n = n + 1;
+			n = n + 1;
+			n = n + 1;
+			n = n + 1;
+			n = n + 1;
+			n = n + 1;
+			n = n + 1;
+			n = n + 1;
+			n = n + 1;
+			n = n + 1;
+		*/
+		/*
+			조건식이 참 일때 동안만 반복수행한다.
+			for(ⓐ초기식;ⓑ조건식;ⓒ증감식){
+				ⓓ반복해야할문장;
+			} 
+			ⓐ -> ⓑ -> ⓓ -> | ⓒ -> ⓑ -> ⓓ 반복하다가 조건이 만족되지 않으면 종료
+		*/
+		for(int i = 0; i < 10; i++) {	// i = 0 1 2 3 4 5 6 7 8 9 	10	//지역변수 : 다시 선언 할 수 있다.
+			n += 1;						// n = 1 2 3 4 5 6 7 8 9 10
+		}
+		System.out.println("n = "+n);
+		System.out.println("**********************************************************");
+		
+		int total = 0;
+		float avg = 0;
+		String grade, pass;
+		
+		int[] scores = {80, 95, 75, 60, 100, 65, 70, 90, 85}; //배열 : reference
+		String names[] = {"김", "이", "박", "최", "정", "오", "배", "강", "장"};
+		
+		for(int i = 0; i < 9; i++) {
+			total += scores[i];
+			if(scores[i] >= 90) {
+				grade = "A";
+			}
+			else if(scores[i] >= 80) {
+				grade = "B";
+			}
+			else if(scores[i] >= 70) {
+				grade = "C";
+			}
+			else if(scores[i] >= 60) {
+				grade = "D";
+			}
+			else {
+				grade = "F";
+			}
+			if(scores[i] >= 70) {
+				pass = "합격";
+			}
+			else {
+				pass = "불합격";
+			}
+			System.out.println("name : "+names[i]+"\tscore : "+scores[i]+"\tgrade : "+grade+"\t"+pass);
+		}
+		
+		avg = total / 9.0f;
+		System.out.println("total : "+total+"\taverage : "+avg);
+			
+		//*************************************************************************************************
+		System.out.printf("\n************************ Practice ************************\n");
+		int total2 = 0;
+		float avg2 = 0;
+		String grade2, pass2;
+		
+		int scores2[] = {100, 55, 63, 72, 88};
+		String names2[] = {"Kim", "Kang", "Lee", "Cho", "Jung"};
+		
+		for(int i = 0; i < 5; i++) {
+			total2 += scores2[i];
+			
+			if(scores2[i] >= 90) {
+				grade2 = "A";
+			}
+			else if(scores2[i] >= 80) {
+				grade2 = "B";
+			}
+			else if(scores2[i] >= 70) {
+				grade2 = "C";
+			}
+			else if(scores2[i] >= 60) {
+				grade2 = "D";
+			}
+			else {
+				grade2 = "F";
+			}
+			
+			if(grade2 != "F") {
+				if(scores2[i]%10 >= 7) {
+					grade2 += "+";
+				}
+				else if(scores2[i]%10 >= 3) {
+					grade2 += "0";
+				}
+				else {
+					grade2 += "-";
+				}
+			}
+			
+			if(scores2[i] >= 70) {
+				pass2 = "Y";
+			}
+			else {
+				pass2 = "N";
+			}
+			
+			System.out.println("\tname\tscore\tgrade\tpass(Y/N)");
+			System.out.println((i+1)+"\t"+names2[i]+"\t"+scores2[i]+"\t"+grade2+"\t"+pass2);
+		}
+		avg2 = total2 / 5.0f;
+		System.out.println("total : "+total2+"\taverage : "+avg2);
+	}
+}

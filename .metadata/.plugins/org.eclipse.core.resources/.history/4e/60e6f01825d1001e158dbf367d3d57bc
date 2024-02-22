@@ -1,0 +1,36 @@
+package org.kh.app2;
+//반복문 : for, while, do~while~
+public class Loop1 {
+	public static void main(String[] args) {
+		int n = 0;	//전역변수 : 한 번만 선언할 수 있다.
+		/*
+			n = n + 1;
+			n = n + 1;
+			n = n + 1;
+			n = n + 1;
+			n = n + 1;
+			n = n + 1;
+			n = n + 1;
+			n = n + 1;
+			n = n + 1;
+			n = n + 1;
+		*/
+		/*
+			조건식이 참 일때 동안만 반복수행한다.
+			for(초기식;조건식;증감식){
+				반복해야할문장;
+			} 
+		*/
+		for(int i = 0; i < 10; i++) {	// i = 0 1 2 3 4 5 6 7 8 9 	10	//지역변수 : 다시 선언 할 수 있다.
+			n += 1;						// n = 1 2 3 4 5 6 7 8 9 10
+		}
+		System.out.println("n = "+n);
+		
+		int[] scores = {80, 95, 75, 60, 100, 65, 70, 90, 85, 95}; //배열 : reference
+		String names[] = {"김", "이", "박", "최", "정", "오", "배", "강", "장", "계"};
+		
+		for(int i = 0; i < 10; i++) {
+			System.out.println("name : "+names[i]+", score : "+scores[i]);
+		}
+	}
+}
